@@ -9,12 +9,12 @@ puts "Hello"
 
 
 class Human 
-    attr_accessor: username, :extraVar # Reads and writes 
-    attr_reader: password # Only reads 
-    attr_writer: age # Can write the age, cannot read.
+    attr_accessor :username, :extraVar # Reads and writes 
+    attr_reader :password # Only reads 
+    attr_writer :age # Can write the age, cannot read.
 
     def initialize(username, password, age, extraVar)
-        @username = username 
+        @username = username
         @password = password
         @age = age
         @extraVar = extraVar
@@ -28,7 +28,7 @@ end
 
 # Instancing of a new Object
 newObj = Human.new("Bob",5,20,40)
-print newObj
+puts newObj
 
 =begin Now, with the accessor and reader and writer, we can pull
 the values out and change them. We can now do the following :
@@ -48,6 +48,18 @@ class Gangster < Human
 
 end
 
-class superGangster < Gangster
+class SuperExtraGangster < Gangster
 
 end
+
+def newFn(myNumber)
+    return myNumber + 10
+end
+
+puts newFn(10)
+
+name = :newSym 
+
+
+
+puts name
